@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
 	background-color: #F8F7F7;
 	margin-top: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 container {
@@ -19,38 +24,47 @@ container {
 }
 
 #top-header {
-	padding: 10px;
+	width: 100%;
+	float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.top-header-body{
+	padding: 16px 10px 10px 59px;
     font-size: 17px;
     min-height: 40px;
     background-color: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 
     			0 1px 8px 0 rgba(0,0,0,.09);
-
 }
 
-header {
-	
+#main-menu {
+	width: 100%;
+	float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 nav {
 	border-top: 1px solid #eee;
-    border-bottom: 2px solid rgba(15, 58, 73, 1);
+    border-bottom: 3px solid rgb(37, 88, 38);
     color: white;
-    padding: 5px 0px 0px;
+    padding: 14px 0px 13px 0px;
     font-size: 17px;
-    min-height: 40px;
     background-color: rgb(61, 214, 33);
     margin-bottom: 25px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),
-    			0 1px 8px 0 rgba(0,0,0,.09);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 0 1px 8px 0 rgba(0,0,0,.09);
 }
 
 .menu {
-	/*float: left;*/
-	list-style: none;
     margin: 0;
-    padding-left: 0;
-	list-style-type: none;
+    list-style: none;
+    list-style-type: none;
 }
 
 .menu > li {
@@ -62,7 +76,6 @@ nav {
 }
 
 .menu > li > a {
-	padding: 10px 15px;
 	color: #fff;
     padding: 10px 15px;
     -webkit-transition: .5s ease padding;
@@ -71,27 +84,110 @@ nav {
     text-decoration: none;
 }
 
-sidebar {
-    width: 16.66666667%;
-
+#body {
+    font-size: 17px;
+    min-height: 40px;
+        margin-bottom: 558px;
 }
 
-content {
-    width: 83.33333333%;
-}
-
-.cards-panel {
-	padding: 10px;
-    background: #fff;
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),0 1px 8px 0 rgba(0,0,0,.09);
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),0 1px 8px 0 rgba(0,0,0,.09);
-    margin-bottom: 15px;
-}
-
-.column {
-	position: relative;
- 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
+#sidebar {
+    width: 25%;
     float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#content {
+	width: 75%;
+	float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.content-body {
+	    margin-bottom: 24px;
+	padding: 10px 48px 10px 48px;
+    font-size: 17px;
+    min-height: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 0 1px 8px 0 rgba(0,0,0,.09);
+}
+
+label {
+	display: inline-block;
+    max-width: 100%;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#author {
+	font-family: sans-serif;
+    color: #A2A2A2;
+}
+
+#title {
+	margin-bottom: -15px;
+    padding-bottom: 0px;
+}
+.sidebar-body {
+	padding: 10px 48px 10px 48px;
+	margin-bottom: 25px;
+    font-size: 17px;
+    min-height: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 
+    			0 1px 8px 0 rgba(0,0,0,.09);
+}
+
+#clock{
+	font-size: 42px;
+    text-align: center;
+    color: red;
+}
+
+#date {
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+}
+
+#top-footer {
+	width: 100%;
+	float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.top-footer-body{
+	padding: 16px 10px 10px 59px;
+    font-size: 17px;
+    min-height: 40px;
+    background-color: #A09F9F;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 0 1px 8px 0 rgba(0,0,0,.09);
+}
+
+#credit-footer {
+	width: 100%;
+	float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.credit-footer-body{
+	    text-align: center;
+    color: darkgrey;
+    margin-bottom: -10px;
+    padding: 12px 59px 1px 59px;
+    font-size: 14px;
+    min-height: 40px;
+    background-color: rgba(248, 247, 247, 0.88);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 0 1px 8px 0 rgba(0,0,0,.09);
 }
