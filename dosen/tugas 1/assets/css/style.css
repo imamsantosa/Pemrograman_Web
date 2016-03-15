@@ -10,7 +10,7 @@ container {
     margin-left: auto;
     width: 1170px;
     display: table;
-    content: " ";
+    content: "";
 }
 
 .row {
@@ -18,13 +18,18 @@ container {
 	margin-left: -15px;
 }
 
-header {
+#top-header {
 	padding: 10px;
     font-size: 17px;
     min-height: 40px;
     background-color: #fff;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),
     			0 1px 8px 0 rgba(0,0,0,.09);
+
+}
+
+header {
+	
 }
 
 nav {
@@ -34,17 +39,42 @@ nav {
     padding: 5px 0px 0px;
     font-size: 17px;
     min-height: 40px;
-    background-color: rgba(33, 115, 166, 1);
+    background-color: rgb(61, 214, 33);
     margin-bottom: 25px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),
     			0 1px 8px 0 rgba(0,0,0,.09);
+}
+
+.menu {
+	/*float: left;*/
+	list-style: none;
+    margin: 0;
+    padding-left: 0;
+	list-style-type: none;
+}
+
+.menu > li {
+	display: inline;
+}
+
+.menu > li > a:hover {
+	background-color: rgb(58, 173, 36);
+}
+
+.menu > li > a {
+	padding: 10px 15px;
+	color: #fff;
+    padding: 10px 15px;
+    -webkit-transition: .5s ease padding;
+    -o-transition: .5s ease padding;
+    transition: .5s ease padding;
+    text-decoration: none;
 }
 
 sidebar {
     width: 16.66666667%;
 
 }
-
 
 content {
     width: 83.33333333%;
