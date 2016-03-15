@@ -1,0 +1,67 @@
+body {
+	background-color: #F8F7F7;
+	margin-top: 0px;
+}
+
+container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1170px;
+    display: table;
+    content: " ";
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+header {
+	padding: 10px;
+    font-size: 17px;
+    min-height: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),
+    			0 1px 8px 0 rgba(0,0,0,.09);
+}
+
+nav {
+	border-top: 1px solid #eee;
+    border-bottom: 2px solid rgba(15, 58, 73, 1);
+    color: white;
+    padding: 5px 0px 0px;
+    font-size: 17px;
+    min-height: 40px;
+    background-color: rgba(33, 115, 166, 1);
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),
+    			0 1px 8px 0 rgba(0,0,0,.09);
+}
+
+sidebar {
+    width: 16.66666667%;
+
+}
+
+
+content {
+    width: 83.33333333%;
+}
+
+.cards-panel {
+	padding: 10px;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),0 1px 8px 0 rgba(0,0,0,.09);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),0 1px 8px 0 rgba(0,0,0,.09);
+    margin-bottom: 15px;
+}
+
+.column {
+	position: relative;
+ 	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+    float: left;
+}
