@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Web Profile Kelompok 1a</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<container>
+		<header class="row">
+			<section id="top-header">
+				<div class="top-header-body">
+					<h1>Selamat Datang</h1>
+				</div>
+			</section>
+			<section id="main-menu">
+				<nav>
+					<ul class="menu">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="profile.html">Profile</a>
+						</li>
+						<li>
+							<a href="gallery.html">Gallery</a>
+						</li>
+						<li>
+							<a href="feedback.html">Feedback</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</section>
+		</header>
+
+		<div id="body" class="row">
+			<div id="content">
+				<div class="content-body">
+                	    
+				</div>
+			</div>
+				
+			<div id="sidebar">
+				<div class="sidebar-body">
+					<div id="clock"></div>
+					<div id="date"></div>
+				</div>
+				<div class="sidebar-body">
+					
+				</div>
+				<div class="sidebar-body">
+					
+				</div>
+			</div>
+		</div>
+
+		<footer class="row">
+			<section id="credit-footer">
+				<div class="credit-footer-body">
+					<strong>© 2016</strong> | developed by Kelompok 1A
+				</div>
+			</section>
+		</footer>
+	</container>
+	<script type="text/javascript">
+		function showTime() {
+		    var today = new Date();
+		    var jam = today.getHours();
+		    var menit = today.getMinutes();
+		    var detik = today.getSeconds();
+		    var tanggal = today.getDate();
+		    var bulan = today.getMonth();
+		    var tahun = (today.getYear() < 1000) ? today.getYear() + 1900 : today.getYear();
+		    jam = checkTime(jam);
+		    menit = checkTime(menit);
+		    detik = checkTime(detik);
+		 	document.getElementById('clock').innerHTML=jam + ":" + menit + ":" + detik;
+		 	document.getElementById('date').innerHTML=tanggal + " - " + checkTime(bulan) + " - " + tahun;
+		}
+
+		function checkTime(i) {
+		    if (i < 10) {
+		        i = "0" + i;
+		    }
+		    return i;
+		}
+
+		setInterval(showTime, 500);
+	</script>
+</body>
+</html>
