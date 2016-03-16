@@ -99,15 +99,33 @@
 			</div>
 				
 			<div id="sidebar">
-				<div class="sidebar-body">
+				<div class="sidebar-panel" id="form_search">
+					<form action="">
+						<input type="search" placeholder="Search...">
+					</form>
+				</div>
+
+				<div class="sidebar-panel" id="date_time">
 					<div id="clock"></div>
 					<div id="date"></div>
 				</div>
-				<div class="sidebar-body">
-					
-				</div>
-				<div class="sidebar-body">
-					
+
+
+				<div class="sidebar-panel" id="feedback">
+					<div class="sidebar-header">
+						<div class="sidebar-title">
+							Feedback
+						</div>
+					</div>
+					<div class="sidebar-body">
+						<div class="feedback-sidebar-header">
+							<img src="assets/image/labtocat.png">
+							<div class="feedback-sidebar-identity">
+								<h5 class="feedback-name">Moch Wahyu Imam Santosa</h5>
+								<h5>@imamsantosa123</h5>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -129,11 +147,10 @@
 		    var tanggal = today.getDate();
 		    var bulan = today.getMonth();
 		    var tahun = (today.getYear() < 1000) ? today.getYear() + 1900 : today.getYear();
-		    jam = checkTime(jam);
-		    menit = checkTime(menit);
-		    detik = checkTime(detik);
-		 	document.getElementById('clock').innerHTML=jam + ":" + menit + ":" + detik;
-		 	document.getElementById('date').innerHTML=tanggal + " - " + checkTime(bulan) + " - " + tahun;
+		    var bln = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+		 	document.getElementById('clock').innerHTML= checkTime(jam) + ":" + checkTime(menit) + ":" + checkTime(detik);
+		 	document.getElementById('date').innerHTML= tanggal + " " + bln[bulan] + " " + tahun;
 		}
 
 		function checkTime(i) {
