@@ -251,6 +251,40 @@ label {
     padding: 0% 6%;
 }
 
+.feedback {
+    display: inline-block;
+}
+.feedback-header > img {
+    float: left;
+    width: 19%;
+}
+
+.feedback-header > .feedback-image {
+    border-radius: 30%;
+    max-width: 100%;
+    height: auto;
+    margin-right: 2%;
+}
+
+.feedback-header > .feedback-identity {
+    position: relative;
+}
+
+.feedback-identity > .feedback-name {
+    padding-top: 2%;
+    margin-bottom: -23px;
+}
+
+.feedback-identity > .feedback-id {
+    color: rgba(255, 0, 0, 0.97);
+}
+
+.feedback-content {
+        font-style: italic;
+    color: rgba(0, 0, 0, 0.55);
+    padding: 0% 6%;
+}
+
 input[type="search"] {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
