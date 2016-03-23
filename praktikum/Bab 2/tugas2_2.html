@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas Nomor 2</title>
+	<style type="text/css">
+		.form-tugas-control {
+		    margin-bottom: 13px;
+		    width: 50%;
+		    resize: horizontal;
+		    border-radius: 8px;
+		    padding: 1%;
+		    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		    border: 1px solid #ccc;
+		    font-family: sans-serif;
+		    color: #191515;
+		}
+
+		.form-tugas-control:focus{
+		    outline: none;
+		}
+
+		.form-tugas > h4{
+		    margin-top: 0%;
+		    margin-bottom: 2%;
+		}
+
+		.form-submit {
+		    padding: 6px;
+		    width: 52%;
+		    border-radius: 8px;
+		    background-color: #7CE36A;
+		    border: 1px solid transparent;
+		    font-family: sans-serif;
+		    font-weight: bold;
+		    touch-action: manipulation;
+		}
+
+		.form-submit:hover{
+		    background-color: #54D83C;
+		}
+
+		.form input{
+			font-size: 17px;
+		}
+	</style>
+</head>
+<body>
+	<form action="proses02_1.php" method="POST" class="form" id="tugas_form">
+		<div class="form-tugas">
+			<h4>Username :</h4>
+			<input type="text" placeholder="username" name="username" id="username" required="true" class="form-tugas-control" />
+		</div>
+		<div class="form-tugas">
+			<h4>Password :</h4>
+			<input type="password" placeholder="your password" id="password1" name="password1" required="true" class="form-tugas-control" />
+		</div>
+		<div class="form-tugas">
+			<h4>Confirm Password :</h4>	                 			
+			<input type="password" placeholder="Confirm your password" id="password2" name="password2" required="true" class="form-tugas-control" />
+		</div>
+		<div class="form-tugas">
+			<input type="submit" class="form-submit" name="submit_btn" id="submit_btn" value="Kirim" onclick="validate()" />
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		function validate(){
+			event.preventDefault();
+			var username = document.getElementById('username').value;
+			var p1 = document.getElementById('password1').value;
+			var p2 = document.getElementById('password2').value;
+
+			if (username == '' || username == null) {
+				alert("Username cannot empty!")
+				return;
+			}
+			if (p1 == '' || p1 == null) {
+				alert("Password cannot empty!");
+				return;
+			}
+			if (p2 == '' || p2 == null) {
+				alert("Recent password cannot empty!");
+				return;
+			}
+			if (p1 != p2) {
+				alert("Password not same!");
+				return
+			}
+			document.getElementById("tugas_form").submit();
+		}
+	</script>
+</body>
+</html>

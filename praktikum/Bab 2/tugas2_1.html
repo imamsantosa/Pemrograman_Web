@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas Nomor 1</title>
+	<style type="text/css">
+		#clock{
+			font-size: 42px;
+		    text-align: center;
+		    color: red;
+		}
+
+		#date {
+		    font-size: 20px;
+		    text-align: center;
+		    color: blue;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<div id="clock"></div>
+		<div id="date"></div>
+	</center>
+
+<script type="text/javascript">
+	function showTime() {
+		    var today = new Date();
+		    var jam = today.getHours();
+		    var menit = today.getMinutes();
+		    var detik = today.getSeconds();
+		    var tanggal = today.getDate();
+		    var bulan = today.getMonth();
+		    var tahun = (today.getYear() < 1000) ? today.getYear() + 1900 : today.getYear();
+		    var bln = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+		    jam = checkNol(jam);
+		    menit = checkNol(menit);
+		    detik = checkNol(detik);
+		 	document.getElementById('clock').innerHTML=jam + ":" + menit + ":" + detik;
+		 	document.getElementById('date').innerHTML=tanggal + " - " + bln[bulan] + " - " + tahun;
+		}
+
+		function checkNol(i) {
+		    if (i < 10) {
+		        i = "0" + i;
+		    }
+		    return i;
+		}
+
+		setInterval(showTime, 500);
+</script>
+</body>
+</html>
