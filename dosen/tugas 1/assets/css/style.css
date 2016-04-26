@@ -23,6 +23,10 @@ container {
 	margin-left: -15px;
 }
 
+.row-form {
+    margin-bottom: 20px;
+}
+
 #top-header {
 	width: 100%;
 	float: left;
