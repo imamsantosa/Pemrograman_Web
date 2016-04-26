@@ -1,5 +1,5 @@
 <?php
-	$someWords = "Please don't blow me to pieces."; 
+	$someWords = "Please don't blow me to pieces.";
 
 	$wordChunks = explode(" ", $someWords);
 	for($i = 0; $i < count($wordChunks); $i++){

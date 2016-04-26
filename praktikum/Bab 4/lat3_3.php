@@ -1,6 +1,7 @@
 <?php
 	//string that needs to be customized
-	$rawstring = "Welcome Birmingham parents. Your replaceme is a pleasure to have!";
+	$rawstring = "Welcome Birmingham parents. Your replaceme is a
+              	 pleasure to have!";
 
 	//male string
 	$malestr = str_replace("replaceme", "son", $rawstring);

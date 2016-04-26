@@ -31,6 +31,7 @@ function insert($post)
 function replaceEmoticon($string)
 {
 	$list = [':p', ':)', ':D', ':\'D', ';)', ':('];
+	
 	$unicode = ['&#128523;', '&#128522;', '&#128512;', '&#128517;', '&#128521;', '&#128532;'];
 
 	return str_replace($list, $unicode, $string);

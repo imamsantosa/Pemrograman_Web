@@ -6,5 +6,4 @@
 	$stringData = "New Stuff 2\n";
 	fwrite($fh, $stringData);
 	fclose($fh);
-	echo '&#10084;';
 ?>
