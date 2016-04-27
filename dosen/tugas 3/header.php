@@ -15,6 +15,9 @@ if (isset($key)) {
 						<a href="index.php">Home</a>
 					</li>
 					<li>
+						<a href="bukutamu.php">Buku Tamu</a>
+					</li>
+					<li>
 						<a href="profile.php">Profile</a>
 					</li>
 					<li>

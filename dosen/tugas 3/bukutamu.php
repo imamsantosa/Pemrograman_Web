@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,26 +12,36 @@
 	<container>
 		<?php
 			$key = true;
-		
 			include('header.php');
 		?>
 		<div id="body" class="row">
 			<div id="content">
 				<div class="content-body">
-					<div class="contact">
-						<div class="content-title"> Home Office : </div>
-						<center>
-							<h3>Jalan Sumbersari 304A Malang</h3>
-							<h3>085786267752</h3>
-						</center>
-					</div>
-					<hr>
-					<br>
 					<div class="contact-form">
 						<div class="content-title">
-							Contact US
+							Buku Tamu
 						</div>
-						<form action="#" method="post">
+						<?php
+						if (isset($_GET['status']) && isset($_GET['message'])) {
+							if($_GET['status'] == 'error'){
+								?>
+								<div class="info info-error">
+									<div class="info-message"><?php echo $_GET['message']; ?></div>
+								</div>
+								<?php
+							}
+
+							if($_GET['status'] == 'success'){
+								?>
+								<div class="info info-success">
+									<div class="info-message"><?php echo $_GET['message']; ?></div>
+								</div>
+								<?php
+							}
+						}
+
+						?>
+						<form action="" method="post">
 							<div class="contact">
 								<h4>Name :</h4>
 	                 			<input type="text" placeholder="Full Name" name="nama" required="true" class="form-contact" />
@@ -38,15 +51,11 @@
 	                 			<input type="email" placeholder="Email" name="email" required="true" class="form-contact" />
 							</div>
 							<div class="contact">
-								<h4>Subject :</h4>
-	                 			<input type="text" placeholder="Subject" name="subject" required="true" class="form-contact" />
-							</div>
-							<div class="contact">
 								<h4>Message :</h4>	                 			
-	                 			<textarea class="form-contact" rows="10" cols="50" name="pesan"></textarea>
+	                 			<textarea class="form-contact" rows="10" cols="50" name="pesan" placeholder="Your Message" required="true" style="font-size: 17px;"></textarea>
 							</div>
 							<div class="contact">
-								<input type="submit" class="contact-submit" name="submit" value="Kirim" />
+								<input type="submit" class="contact-submit" name="submit-btn" value="Kirim" />
 							</div>
                      	</form>
 					</div>
@@ -69,3 +78,19 @@
 	<script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>
 </html>
+
+<?php 
+
+if (isset($_POST['nama'])) {
+	require_once('bukutamuproses.php');
+
+	$insert = new BukuTamu();
+
+	if ($insert->insert($_POST)) { 
+		header('location: ?status=success&message=Berhasil mengirimkan buku tamu kedalam system');
+	} else {
+		header('location: ?status=error&message=Gagal mengirimkan buku tamu kedalam system. Silahkan hubungi administrator'); 
+	}
+}
+
+?>
